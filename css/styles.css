@@ -17,6 +17,10 @@
   --linkhover-color: #404bbf;
   --button-normal-color: #4d5ae5;
   --button-hover-color: #404bbf;
+  --icon-color: #404bbf;
+  --icon-color-hover: #31d0aa;
+  --icon-company: #8e8f99;
+  --icon-company-hover: #404bbf;
 }
 
 /* global styles */
@@ -184,8 +188,20 @@ body {
 /*------------footer styles------------------- */
 
 .footer-space {
+  width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+
   background: var(--background-section-color);
   padding: 100px 0;
+}
+
+.footer-blocks {
+  display: flex;
+}
+
+.footer-description {
+  margin-right: 120px;
 }
 
 .footer-space .logo {
@@ -201,13 +217,71 @@ body {
   color: var(--footer-text-color);
 }
 
+.footer-icons-descriprion {
+  margin-bottom: 16px;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.social-block-icon {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+
+  background-color: var(--icon-color);
+  border-radius: 50%;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus {
+  background-color: var(--icon-color-hover);
+}
+
+.social-icon-link:nth-last-child(-n + 1) {
+  margin-right: 0;
+}
+
+.social-icon {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+
 /* -----------PAGE index-------------------- */
+
+.icon .icone-inside {
+  fill: red;
+}
+
 /* ----hero----- */
 .hero-section {
   padding-top: 188px;
   padding-bottom: 188px;
   text-align: center;
-  background: var(--background-section-color);
+}
+
+.hero-img {
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: var(--background-section-color);
+  background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+    url('../images/hero/hero-img.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .hero-title {
@@ -276,6 +350,24 @@ body {
   margin-bottom: 8px;
 }
 
+.advantages-icon-box {
+  width: 264px;
+  height: 112px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 8px;
+
+  background-color: var(--footer-text-color);
+  border-radius: 4px;
+}
+
+.advantages-icon {
+  width: 64px;
+  height: 64px;
+}
+
 /* <!-- type of project --> */
 
 .type-project-section {
@@ -313,6 +405,9 @@ body {
 
 .section-team {
   padding: 120px 0;
+  max-width: 1440px;
+  margin-right: auto;
+  margin-left: auto;
 
   background-color: #f4f4fd;
 }
@@ -339,6 +434,8 @@ body {
   border-radius: 0px 0px 4px 4px;
 
   background-color: var(--background-color);
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-item:nth-last-child(-n + 1) {
@@ -350,8 +447,85 @@ body {
   text-align: center;
 }
 
-.team-item-text .title-name {
+.team-item-text .title-name,
+.team-item-text .text-description {
   margin-bottom: 8px;
+}
+
+.team-icon-box {
+  display: flex;
+
+  justify-content: center;
+}
+
+.team-icon-link {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  margin-right: 24px;
+
+  background-color: var(--icon-color);
+  border-radius: 50%;
+}
+
+.team-icon-link:nth-last-child(-n + 1) {
+  margin-right: 0;
+}
+
+.team-icon {
+  width: 16px;
+  height: 16px;
+  margin: auto;
+}
+
+/*-----------customers---------------- */
+
+.section-customers {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.customers-list {
+  display: flex;
+}
+
+.customers-item {
+  margin-right: 24px;
+}
+
+.customers-item:nth-last-child(-n + 1) {
+  margin-right: 0;
+}
+
+.customers-link {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  justify-content: center;
+
+  width: 168px;
+  height: 88px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: var(--button-hover-color);
+}
+
+.customer-icon {
+  width: 104px;
+  height: 56px;
+  fill: var(--icon-company);
+}
+
+.customer-icon:hover {
+  fill: var(--icon-company-hover);
 }
 
 /* -----------PAGE portfolio-------------------- */
@@ -396,6 +570,8 @@ body {
   background-color: var(--button-hover-color);
   color: #ffffff;
   border: 1px solid transparent;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* <!-- list of the projects --> */
@@ -428,4 +604,9 @@ body {
 
 .project-item .title-name {
   margin-bottom: 8px;
+}
+
+.project-item:hover {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
+    0px 2px 1px rgba(46, 47, 66, 0.08);
 }
