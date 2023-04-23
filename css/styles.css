@@ -252,7 +252,7 @@ body {
   align-items: center;
   justify-content: center;
 
-  background-color: var(--icon-color);
+  background-color: var(--button-normal-color);
   border-radius: 50%;
 }
 
@@ -476,7 +476,7 @@ body {
 }
 
 .team-icon-link:hover,
-.team-icon-list:focus {
+.team-icon-link:focus {
   background-color: var(--button-hover-color);
 }
 
