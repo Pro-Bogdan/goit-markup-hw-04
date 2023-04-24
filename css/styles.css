@@ -117,10 +117,6 @@ body {
 /* -------------header------------------------- */
 /*------------- navigation styles ----------------*/
 .header-section {
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
-
   border-bottom: 1px solid #e7e9fc;
   box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 1px 6px rgba(46, 47, 66, 0.08);
@@ -186,8 +182,8 @@ body {
 }
 
 /* hover and focus */
-.menu-item:hover,
-.menu-item:focus,
+.menu-button:hover,
+.menu-button:focus,
 .address-item:hover,
 .address-item:focus {
   color: var(--linkhover-color);
@@ -196,10 +192,6 @@ body {
 /*------------footer styles------------------- */
 
 .footer-space {
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
-
   background: var(--background-section-color);
   padding: 100px 0;
 }
@@ -280,6 +272,7 @@ body {
 
 .hero-img {
   max-width: 1440px;
+  height: 600px;
   margin-right: auto;
   margin-left: auto;
 
@@ -406,9 +399,6 @@ body {
 
 .section-team {
   padding: 120px 0;
-  max-width: 1440px;
-  margin-right: auto;
-  margin-left: auto;
 
   background-color: #f4f4fd;
 }
